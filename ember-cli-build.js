@@ -7,6 +7,18 @@ module.exports = function(defaults) {
     // Add options here
   });
 
+  app.import('vendor/css/core-style.css');
+  app.import('vendor/css/bootstrap.min.css');
+  app.import('vendor/css/owl.carousel.css');
+  app.import('vendor/css/animate.css');
+  app.import('vendor/css/magnific-popup.css');
+  app.import('vendor/css/jquery-ui.min.css');
+  app.import('vendor/css/jnice-select.css');
+  app.import('vendor/css/font-awesome.min.css');
+  app.import('vendor/js/popper.min.js');
+  app.import('vendor/js/bootstrap.min.js');
+  app.import('vendor/js/plugins.js');
+  app.import('vendor/js/active.js');
   // Use `app.import` to add additional libraries to the generated
   // output files.
   //
