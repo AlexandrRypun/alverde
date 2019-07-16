@@ -14,14 +14,14 @@
             <i class="fa fa-close" aria-hidden="true"></i>
         </div>
         <div class="logo">
-            <a href="index.html"><img src="/assets/img/core-img/logo.png" alt=""></a>
+            <LinkTo @route='index'><img src="/assets/img/core-img/logo.png" alt=""></LinkTo>
         </div>
         <nav class="amado-nav">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="shop.html">Shop</a></li>
                 <li><a href="product-details.html">Product</a></li>
-                <li class="active"><a href="cart.html">Cart</a></li>
+                <li><LinkTo @route='cart'>Cart</LinkTo></li>
                 <li><a href="checkout.html">Checkout</a></li>
             </ul>
         </nav>
@@ -39,9 +39,7 @@
             <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
         </div>
     </header>
-    <div class="section-padding-100 clearfix">
-        {{outlet}}
-    </div>
+    {{outlet}}
 </div>
 
 <footer class="footer_area clearfix">

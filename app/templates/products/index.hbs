@@ -1,1 +1,13 @@
-index
+<ProductsCategories @selectedCategoryId={{category}} />
+<div class="section-padding-100 clearfix amado_product_area">
+    {{#each this.model as |productsRow|}}
+        <div class="row">
+            {{#each productsRow as |product|}}
+                <ProductTeaser @product={{product}} />
+            {{/each}}
+        </div>
+    {{else}}
+        There are no products in selected category
+    {{/each}}
+</div>
+
