@@ -1,0 +1,6 @@
+<select onchange={{action "setSelection" value="target.value"}}>
+    {{#each languages as |lang|}}
+        <option value="{{lang.key}}" selected={{eq lang.key selected}}>{{lang.value}}</option>
+    {{/each}}
+</select>
+

@@ -3,6 +3,7 @@
 module.exports = {
   extends: 'recommended',
   rules: {
-    'block-indentation': 4
+    'block-indentation': 4,
+    'no-bare-strings': true
   }
 };

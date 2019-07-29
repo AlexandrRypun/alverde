@@ -1,7 +1,7 @@
 <div class="single-product-wrapper">
     <LinkTo @route="products.product" @model={{product}}>
         <div class="product-img">
-            <img src={{product.img_teaser}} alt={{product.name}} >
+            <img src={{product.img_teaser}} alt={{translate product 'name'}} >
             <img class="hover-img" src="/assets/img/product-img/product1.jpg" alt="">
         </div>
     </LinkTo>
@@ -10,7 +10,7 @@
             <div class="line"></div>
             <p class="product-price">{{hryvna-price product.price}}</p>
             <LinkTo @route="products.product" @model={{product}}>
-                <h6>{{product.name}}</h6>
+                <h6>{{translate product 'name'}}</h6>
             </LinkTo>
         </div>
 
