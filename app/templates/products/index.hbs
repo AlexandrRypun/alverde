@@ -3,7 +3,9 @@
     {{#each this.model as |productsRow|}}
         <div class="row">
             {{#each productsRow as |product|}}
-                <ProductTeaser @product={{product}} />
+                {{#let (component 'product/product-teaser') as |ProductTeaser|}}
+                    <ProductTeaser @product={{product}} />
+                {{/let}}
             {{/each}}
         </div>
     {{else}}

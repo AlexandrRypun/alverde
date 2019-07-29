@@ -6,5 +6,8 @@ export default Model.extend({
     price: DS.attr('number'),
     description: DS.attr('string'),
     img_teaser: DS.attr('string'),
-    category: DS.belongsTo('category')
+    category: DS.belongsTo('category'),
+
+    // Additional properties
+    cartQuantity: DS.attr('number', { defaultValue: 0 })
 });

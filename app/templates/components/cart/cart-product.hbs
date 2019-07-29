@@ -1,0 +1,30 @@
+<td class="cart_product_img">
+    <LinkTo @route="products.product" @model={{cartProduct}} target="_blank">
+        <img src="{{cartProduct.img_teaser}}" alt="Product">
+    </LinkTo>
+</td>
+<td class="cart_product_desc">
+    <h5>{{cartProduct.name}}</h5>
+</td>
+<td class="price">
+    <span>{{hryvna-price cartProduct.price}}</span>
+</td>
+<td class="qty">
+    <div class="qty-btn d-flex">
+        <p>Qty</p>
+        <div class="quantity">
+            <span class="qty-minus"><i class="fa fa-minus" aria-hidden="true" {{action 'changeProdQty' false on='click'}}></i></span>
+{{input
+        type="number"
+        class="qty-text"
+        step="1"
+        min="1"
+        max="300"
+        name="quantity"
+        value=cartProduct.cartQuantity
+}}
+
+            <span class="qty-plus"><i class="fa fa-plus" aria-hidden="true" {{action 'changeProdQty' true on='click'}}></i></span>
+        </div>
+    </div>
+</td>

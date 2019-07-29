@@ -18,19 +18,18 @@
         </div>
         <nav class="amado-nav">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="shop.html">Shop</a></li>
-                <li><a href="product-details.html">Product</a></li>
-                <li><LinkTo @route='cart'>Cart</LinkTo></li>
-                <li><a href="checkout.html">Checkout</a></li>
+                <li><LinkTo @route='index'>Home</LinkTo></li>
+                <li><LinkTo @route='products'>Products</LinkTo></li>
+                <li><LinkTo @route='about-us'>About us</LinkTo></li>
+                <li><LinkTo @route='delivery'>Payments & Delivery</LinkTo></li>
+                <li><LinkTo @route='contacts'>Contacts</LinkTo></li>
             </ul>
         </nav>
         <div class="amado-btn-group mt-30 mb-100">
         </div>
         <div class="cart-fav-search mb-100">
-            <a href="cart.html" class="cart-nav"><img src="/assets/img/core-img/cart.png" alt=""> Cart <span>(0)</span></a>
-            <a href="#" class="fav-nav"><img src="/assets/img/core-img/favorites.png" alt=""> Favourite</a>
-            <a href="#" class="search-nav"><img src="/assets/img/core-img/search.png" alt=""> Search</a>
+            <LinkTo @route='cart' class="cart-nav"><img src="/assets/img/core-img/cart.png" alt="">Cart <span>({{cartProductsQty}})</span></LinkTo>
+            <a href="#" class="search-nav"><img src="/assets/img/core-img/search.png" alt="">Search</a>
         </div>
         <div class="social-info d-flex justify-content-between">
             <a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
