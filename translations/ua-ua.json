@@ -1,5 +1,62 @@
 {
+  "logoDesc": "Найкраща компанія",
+  "footerSignature": "З 2019",
+  "closeSign": "×",
+  "x": "×",
+  "mainMenu": {
+    "home": "Головна",
+    "categories": "Категорії",
+    "allCategories": "Всі категорії",
+    "aboutUs": "Про нас",
+    "delivery": "Оплата і доставка",
+    "contacts": "Контакти"
+  },
+  "login": {
+    "header": "Логін",
+    "loginDesc": "Будь ласка, увійдіть в систему заповнивши наступні поля.",
+    "close": "Закрити",
+    "rememberMe": "Запам'ятати мене",
+    "forgotPassword": "Забули пароль?",
+    "submit": "Увійти",
+    "placeholder": {
+      "username": "Нікнейм",
+      "password": "Пароль"
+    }
+  },
   "cart": {
-    "title": "Кошик"
+    "title": "Кошик",
+    "cartTotalHeader": "Сума",
+    "cartTotal": "Сума",
+    "submit": "Перейти до оплати",
+    "colName": {
+      "prodRemove": "Видалити",
+      "prodImage": "Фото",
+      "prodName": "Продукт",
+      "prodPrice": "Ціна",
+      "prodQty": "Кількість",
+      "prodTotal": "Сума"
+    }
+  },
+  "checkout": {
+    "addressHeader": "Адреса доставки",
+    "userName": "Ім'я",
+    "userSurname": "Прізвище",
+    "userAddress": "Область / Район / Місто (Село)",
+    "userNP": "Відділення Нової Пошти",
+    "userEmail": "Email",
+    "userPhone": "Телефон",
+    "orderHeader": "Ваше замовлення",
+    "orderTotal": "Сума замовлення",
+    "payByCard": "Оплатити картою",
+    "payByCash": "Оплатити готівкою (після отримання)",
+    "submit": "Оформити замовлення",
+    "colName": {
+      "prodName": "Продукт",
+      "prodTotal": "Сума"
+    }
+  },
+  "products": {
+    "addToCart": "Додати до кошика",
+    "header": "Продукти Alverde"
   }
 }

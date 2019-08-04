@@ -1,6 +1,7 @@
-<select onchange={{action "setSelection" value="target.value"}}>
-    {{#each languages as |lang|}}
-        <option value="{{lang.key}}" selected={{eq lang.key selected}}>{{lang.value}}</option>
-    {{/each}}
-</select>
-
+<li><a href="#">{{selected}} <i class="pe-7s-angle-down"></i></a>
+    <ul>
+        {{#each-in languages as |langKey langName|}}
+            <li><a href="#" {{action "setSelection" langKey on="click"}}>{{langName}}</a></li>
+        {{/each-in}}
+    </ul>
+</li>

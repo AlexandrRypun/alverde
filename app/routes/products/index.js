@@ -1,5 +1,4 @@
 import Route from '@ember/routing/route';
-import chunk from 'chunk';
 
 export default Route.extend({
     queryParams: {
@@ -12,7 +11,6 @@ export default Route.extend({
     },
 
     async model(params) {
-        const products = await this.store.query('product', params);
-        return chunk(products, 2);
+        return this.store.query('product', params);
     }
 });

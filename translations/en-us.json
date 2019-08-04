@@ -1,5 +1,62 @@
 {
+  "logoDesc": "The best company",
+  "footerSignature": "Since 2019",
+  "closeSign": "×",
+  "x": "×",
+  "mainMenu": {
+    "home": "Home",
+    "categories": "Categories",
+    "allCategories": "All categories",
+    "aboutUs": "About Us",
+    "delivery": "Payment & Delivery",
+    "contacts": "Contacts"
+  },
+  "login": {
+    "header": "Login",
+    "loginDesc": "Please login using account detail bellow.",
+    "close": "Close",
+    "rememberMe": "Remember me",
+    "forgotPassword": "Forgot Password?",
+    "submit": "Login",
+    "placeholder": {
+      "username": "Username",
+      "password": "Password"
+    }
+  },
   "cart": {
-    "title": "Shopping Cart"
+    "title": "Shopping Cart",
+    "cartTotalHeader": "Cart totals",
+    "cartTotal": "Total",
+    "submit": "Proceed to checkout",
+    "colName": {
+      "prodRemove": "Remove",
+      "prodImage": "Image",
+      "prodName": "Product",
+      "prodPrice": "Price",
+      "prodQty": "Quantity",
+      "prodTotal": "Total"
+    }
+  },
+  "checkout": {
+    "addressHeader": "Shipping Details",
+    "userName": "First Name",
+    "userSurname": "Last Name",
+    "userAddress": "Region / District / City (Village)",
+    "userNP": "Nova poshta department",
+    "userEmail": "Email",
+    "userPhone": "Phone",
+    "orderHeader": "Your order",
+    "orderTotal": "Order Total",
+    "payByCard": "By card",
+    "payByCash": "Cash (after receiving)",
+    "submit": "Place order",
+    "colName": {
+      "prodName": "Product",
+      "prodTotal": "Total"
+    }
+  },
+  "products": {
+    "addToCart": "Add to Cart",
+    "header": "Alverde products"
   }
 }

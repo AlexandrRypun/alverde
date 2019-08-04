@@ -5,25 +5,24 @@ import { observer } from '@ember/object';
 
 export default Service.extend({
     store: service(),
-    products: null,
 
     productsObserver: observer('products.@each.cartQuantity', function() {
         this.saveToLocalStorage();
     }),
 
-    async init(...args) {
-        this._super(args);
-
+    async loadProducts() {
         const cartProducts = A();
-
         const savedCartProducts = localStorage.getItem('cartProducts');
         if (savedCartProducts) {
             const parsedSavedCartProducts = JSON.parse(savedCartProducts);
-            const products = await this.store.query('product', {id: Object.keys(parsedSavedCartProducts)});
-            products.forEach(p => {
-                p.set('cartQuantity', Number(parsedSavedCartProducts[p.id].qty));
-                cartProducts.pushObject(p);
-            });
+            const ids = Object.keys(parsedSavedCartProducts);
+            if (ids.length > 0) {
+                const products = await this.store.query('product', {id: Object.keys(parsedSavedCartProducts)});
+                products.forEach(p => {
+                    p.set('cartQuantity', Number(parsedSavedCartProducts[p.id].qty));
+                    cartProducts.pushObject(p);
+                });
+            }
         }
         this.set('products', cartProducts);
     },

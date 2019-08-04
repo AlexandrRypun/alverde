@@ -1,10 +1,17 @@
-import {A} from '@ember/array';
 import EmberObject from '@ember/object';
 
 export default {
-    languages: A([
-      EmberObject.create({key: 'ua-ua', value: 'Українська'}),
-      EmberObject.create({key: 'ru-ru', value: 'Русский'}),
-      EmberObject.create({key: 'en-us', value: 'English'})
-    ])
+    languages: EmberObject.create({
+        'ua-ua': 'Українська',
+        'ru-ru': 'Русский',
+        'en-us': 'English'
+    }),
+    productsScheme: EmberObject.create({
+        5: [3],
+        6: [3, 4],
+        7: [1, 4, 5],
+        8: [3, 4],
+        10: [3, 6],
+        11: [3, 4, 8]
+    }),
 }

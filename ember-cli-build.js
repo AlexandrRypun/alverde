@@ -9,16 +9,31 @@ module.exports = function(defaults) {
 
   app.import('vendor/css/bootstrap.min.css');
   app.import('vendor/css/owl.carousel.css');
-  app.import('vendor/css/animate.css');
-  app.import('vendor/css/magnific-popup.css');
-  app.import('vendor/css/jquery-ui.min.css');
-  app.import('vendor/css/jnice-select.css');
+  app.import('vendor/css/pe-icon-7-stroke.css');
   app.import('vendor/css/font-awesome.min.css');
-  app.import('vendor/css/core-style.css');
-  app.import('vendor/js/popper.min.js');
+  app.import('vendor/css/meanmenu.css');
+  app.import('vendor/css/shortcodes/bundle.css');
+  app.import('vendor/css/shortcodes/header.css');
+  app.import('vendor/css/shortcodes/slider.css');
+  app.import('vendor/css/shortcodes/shop.css');
+  app.import('vendor/css/shortcodes/footer.css');
+  app.import('vendor/css/shortcodes/modal.css');
+  app.import('vendor/css/shortcodes/shortcode.css');
+  app.import('vendor/css/style.css');
+  app.import('vendor/css/responsive.css');
+
+  app.import('vendor/js/vendor/modernizr-2.8.3.min.js');
+  app.import('vendor/js/vendor/jquery-1.12.0.min.js');
   app.import('vendor/js/bootstrap.min.js');
+  app.import('vendor/js/jquery.meanmenu.js');
+  app.import('vendor/js/isotope.pkgd.min.js');
+  app.import('vendor/js/imagesloaded.pkgd.min.js');
+  app.import('vendor/js/jquery.counterup.min.js');
+  app.import('vendor/js/waypoints.min.js');
+  // app.import('vendor/js/ajax-mail.js');
+  app.import('vendor/js/owl.carousel.min.js');
   app.import('vendor/js/plugins.js');
-  app.import('vendor/js/active.js');
+  app.import('vendor/js/main.js');
 
   app.import('node_modules/chunk/src/chunk.js', {
     using: [

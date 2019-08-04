@@ -1,0 +1,122 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-6 col-md-6">
+            <div class="checkbox-form">
+                <h3>{{t "checkout.addressHeader"}}</h3>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="checkout-form-list">
+                            <label>{{t "checkout.userName"}} <span class="required">*</span></label>
+                            <input type="text" placeholder="">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="checkout-form-list">
+                            <label>{{t "checkout.userSurname"}} <span class="required">*</span></label>
+                            <input type="text" placeholder="">
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="checkout-form-list">
+                            <label>{{t "checkout.userAddress"}} <span class="required">*</span></label>
+                            <input type="text" placeholder="">
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="checkout-form-list">
+                            <label>{{t "checkout.userNP"}} <span class="required">*</span></label>
+                            <input type="text" placeholder="">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="checkout-form-list">
+                            <label>{{t "checkout.userEmail"}} <span class="required">*</span></label>
+                            <input type="email" placeholder="">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="checkout-form-list">
+                            <label>{{t "checkout.userPhone"}} <span class="required">*</span></label>
+                            <input type="text" placeholder="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-6">
+            <div class="your-order">
+                <h3>{{t "checkout.orderHeader"}}</h3>
+                <div class="your-order-table table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="product-name">{{t "checkout.colName.prodName"}}</th>
+                                <th class="product-total">{{t "checkout.colName.prodTotal"}}</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {{#each this.order.products as |product|}}
+                                <tr class="cart_item">
+                                    <td class="product-name">
+                                        {{translate product.product "name"}} <strong class="product-quantity"> {{t "x"}} {{product.quantity}}</strong>
+                                    </td>
+                                    <td class="product-total">
+                                        <span class="amount">{{hryvna-price (mult product.price product.quantity)}}</span>
+                                    </td>
+                                </tr>
+                            {{/each}}
+                        </tbody>
+                        <tfoot>
+                            <tr class="order-total">
+                                <th>{{t "checkout.orderTotal"}}</th>
+                                <td><strong><span class="amount">{{hryvna-price this.order.totalSum}}</span></strong>
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+                <div class="payment-method">
+                    <div class="payment-accordion">
+                        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab">
+                                    <h4 class="panel-title">
+                                        {{#radio-button
+                                                value="1"
+                                                groupValue=order.payment_method
+                                                name="payment_method"
+                                        }}
+                                            {{t "checkout.payByCard"}}
+                                        {{/radio-button}}
+                                    </h4>
+                                </div>
+                                {{#if (eq order.payment_method "1")}}
+                                    <div class="panel-collapse" role="tabpanel">
+                                        <div class="panel-body">
+                                        </div>
+                                    </div>
+                                {{/if}}
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingTwo">
+                                    <h4 class="panel-title">
+                                        {{#radio-button
+                                                value="2"
+                                                groupValue=order.payment_method
+                                                name="payment_method"
+                                        }}
+                                            {{t "checkout.payByCash"}}
+                                        {{/radio-button}}
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order-button-payment">
+                            <input type="submit" value={{t "checkout.submit"}} {{action "saveOrder" on="click"}}>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

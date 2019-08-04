@@ -1,5 +1,62 @@
 {
+  "logoDesc": "Лучшая компания",
+  "footerSignature": "С 2019",
+  "closeSign": "×",
+  "x": "×",
+  "mainMenu": {
+    "home": "Главная",
+    "categories": "Категории",
+    "allCategories": "Все категории",
+    "aboutUs": "О нас",
+    "delivery": "Оплата и доставка",
+    "contacts": "Контакты"
+  },
+  "login": {
+    "header": "Логин",
+    "loginDesc": "Пожалуйста, введите следующие поля, чтобы войти в систему.",
+    "close": "Закрыть",
+    "rememberMe": "Запомнить меня",
+    "forgotPassword": "Забыли пароль?",
+    "submit": "Ввойти",
+    "placeholder": {
+      "username": "Никнейм",
+      "password": "Пароль"
+    }
+  },
   "cart": {
-    "title": "Корзина"
+    "title": "Корзина",
+    "cartTotalHeader": "Сумма",
+    "cartTotal": "Сумма",
+    "submit": "Перейти к оплате",
+    "colName": {
+      "prodRemove": "Удалить",
+      "prodImage": "Фото",
+      "prodName": "Продукт",
+      "prodPrice": "Цена",
+      "prodQty": "Количество",
+      "prodTotal": "Сумма"
+    }
+  },
+  "checkout": {
+    "addressHeader": "Адресс доставки",
+    "userName": "Имя",
+    "userSurname": "Фамилия",
+    "userAddress": "Область / Район / Город (Село)",
+    "userNP": "Оттделение Новой Почты",
+    "userEmail": "Email",
+    "userPhone": "Телефон",
+    "orderHeader": "Ваш заказ",
+    "orderTotal": "Сумма заказа",
+    "payByCard": "Оплатить картой",
+    "payByCash": "Оплатить наличными (после получения)",
+    "submit": "Оформить заказ",
+    "colName": {
+      "prodName": "Продукт",
+      "prodTotal": "Сумма"
+    }
+  },
+  "products": {
+    "addToCart": "Добавить в корзину",
+    "header": "Продукты Alverde"
   }
 }

@@ -4,11 +4,11 @@ import { computed } from '@ember/object';
 import constants from 'alverde/utils/constants';
 
 export default Component.extend({
-    tagName: '',
+    tagName: 'ul',
     intl: service(),
 
     selected: computed('intl.locale', function() {
-        return this.intl.primaryLocale;
+        return this.languages[this.intl.primaryLocale];
     }),
     init(...args) {
         this._super(args);
