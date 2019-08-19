@@ -8,7 +8,7 @@ module.exports = function(defaults) {
   });
 
   app.import('vendor/css/bootstrap.min.css');
-  app.import('vendor/css/owl.carousel.css');
+  app.import('vendor/css/owl.carousel.min.css');
   app.import('vendor/css/pe-icon-7-stroke.css');
   app.import('vendor/css/font-awesome.min.css');
   app.import('vendor/css/meanmenu.css');

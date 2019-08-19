@@ -2,7 +2,7 @@
     <div class="grid">
         {{#let (component "product/product-teaser") as |ProductTeaser|}}
             {{#each products as |product index|}}
-                <ProductTeaser @product={{product}} @index={{add index 1}} @qty={{products.length}} />
+                <ProductTeaser @product={{product}} @index={{add index 1}} @qty={{products.length}} @onAddToCart={{onAddToCart}} />
             {{/each}}
         {{/let}}
     </div>

@@ -4,3 +4,13 @@ input[type=radio] {
     vertical-align: middle;
     margin: 0;
 }
+.product-details .quantity-cart .add-to-cart {
+    float: left;
+}
+
+.product-details .quantity-cart .already-in-cart {
+    margin-left: 10px;
+    display: inline-block;
+    height: 40px;
+    padding-top: 10px;
+}

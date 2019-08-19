@@ -10,6 +10,11 @@ export default Service.extend({
         this.saveToLocalStorage();
     }),
 
+    init(...args) {
+        this._super(args);
+        this.set('products', A());
+    },
+
     async loadProducts() {
         const cartProducts = A();
         const savedCartProducts = localStorage.getItem('cartProducts');

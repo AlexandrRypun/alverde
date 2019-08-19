@@ -1,7 +1,7 @@
 <div class="shop hover-style mb-30">
     <div class="shop-img">
         <LinkTo @route="products.product" @model={{product}}>
-            <img src={{product.img_teaser}} alt={{translate product "name"}}>
+            <img src={{product.mainImg}} alt={{translate product "name"}}>
         </LinkTo>
         <div class="shop-title title-style-1">
             <h3><LinkTo @route="products.product" @model={{product}}>{{translate product "name"}}</LinkTo></h3>

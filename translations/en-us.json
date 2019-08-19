@@ -58,5 +58,11 @@
   "products": {
     "addToCart": "Add to Cart",
     "header": "Alverde products"
+  },
+  "product": {
+    "shortDesc": "Short Description",
+    "inCart": "already in the cart",
+    "share": "share",
+    "moreInfo": "More info"
   }
 }

@@ -58,5 +58,11 @@
   "products": {
     "addToCart": "Додати до кошика",
     "header": "Продукти Alverde"
+  },
+  "product": {
+    "shortDesc": "Короткий опис",
+    "inCart": "вже в кошику",
+    "share": "поділитися",
+    "moreInfo": "Детальніше"
   }
 }

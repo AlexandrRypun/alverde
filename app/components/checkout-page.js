@@ -29,7 +29,6 @@ export default Component.extend({
 
     actions: {
         saveOrder() {
-            console.log(this.order.serialize());
         }
     }
 });

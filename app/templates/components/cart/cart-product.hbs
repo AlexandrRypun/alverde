@@ -1,7 +1,7 @@
 <td class="product-remove"><a href="#" {{action "removeProduct" cartProduct on="click"}}><i class="fa fa-times"></i></a></td>
 <td class="product-thumbnail">
     <LinkTo @route="products.product" @model={{cartProduct}} target="_blank">
-        <img src={{cartProduct.img_teaser}} alt={{translate cartProduct "name"}}>
+        <img src={{cartProduct.mainImg}} alt={{translate cartProduct "name"}}>
     </LinkTo>
 </td>
 <td class="product-name">

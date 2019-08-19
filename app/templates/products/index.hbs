@@ -4,7 +4,7 @@
             <h2>{{t "products.header"}}</h2>
         </div>
         {{#let (component "product/products-list") as |ProductsList|}}
-            <ProductsList @products={{this.model}}/>
+            <ProductsList @products={{this.model}} @onAddToCart={{action "onAddToCart"}} />
         {{/let}}
     </div>
 </div>

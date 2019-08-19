@@ -58,5 +58,11 @@
   "products": {
     "addToCart": "Добавить в корзину",
     "header": "Продукты Alverde"
+  },
+  "product": {
+    "shortDesc": "Краткое описание",
+    "inCart": "уже в корзине",
+    "share": "поделиться",
+    "moreInfo": "Подробнее"
   }
 }
