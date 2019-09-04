@@ -1,7 +1,7 @@
 import DS from 'ember-data';
-const { Model } = DS;
+import AppModel from './application';
 
-export default Model.extend({
+export default AppModel.extend({
     status: DS.attr('number'),
     payment_method: DS.attr('number'),
     user_name: DS.attr('string'),

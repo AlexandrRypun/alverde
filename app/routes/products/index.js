@@ -11,6 +11,6 @@ export default Route.extend({
     },
 
     async model(params) {
-        return this.store.query('product', params);
+        return this.store.query('product', { include: ['category', 'translations', 'images'], ...params });
     }
 });

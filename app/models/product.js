@@ -1,9 +1,12 @@
 import DS from 'ember-data';
 import { computed } from '@ember/object';
-const { Model } = DS;
+import AppModel from './application';
 
-export default Model.extend({
+export default AppModel.extend({
+    validatePath: '/products/validate',
+
     price: DS.attr('number'),
+    oldPrice: DS.attr('number'),
     category: DS.belongsTo('category'),
     images: DS.hasMany('productImage'),
     translations: DS.hasMany('productTranslation'),

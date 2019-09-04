@@ -1,8 +1,8 @@
 import DS from 'ember-data';
-const { Model } = DS;
+import AppModel from './application';
 
-export default Model.extend({
+export default AppModel.extend({
     src: DS.attr('string'),
     main: DS.attr('boolean'),
-    product_id: DS.attr('number'),
+    productId: DS.attr('number'),
 });

@@ -22,7 +22,7 @@ export default Service.extend({
             const parsedSavedCartProducts = JSON.parse(savedCartProducts);
             const ids = Object.keys(parsedSavedCartProducts);
             if (ids.length > 0) {
-                const products = await this.store.query('product', {id: Object.keys(parsedSavedCartProducts)});
+                const products = await this.store.query('product', {id: Object.keys(parsedSavedCartProducts), include: ['category', 'translations', 'images']});
                 products.forEach(p => {
                     p.set('cartQuantity', Number(parsedSavedCartProducts[p.id].qty));
                     cartProducts.pushObject(p);
