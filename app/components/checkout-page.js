@@ -10,25 +10,27 @@ export default Component.extend({
     init(...args) {
         this._super(args);
         const orderProducts = A();
-        let totalSum = 0;
+        let price = 0;
         this.cart.products.forEach(product => {
             orderProducts.pushObject(this.store.createRecord('order-product', {
+                productId: product.id,
                 price: product.price,
                 quantity: product.cartQuantity,
                 product
             }));
-            totalSum += product.price * product.cartQuantity;
+            price += product.price * product.cartQuantity;
         });
         const order = this.store.createRecord('order', {
-            status: 1,
+            status: 'W',
             products: orderProducts,
-            totalSum
+            price
         });
         this.set('order', order);
     },
 
     actions: {
         saveOrder() {
+            this.order.save();
         }
     }
 });

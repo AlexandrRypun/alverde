@@ -7,37 +7,85 @@
                     <div class="col-md-6">
                         <div class="checkout-form-list">
                             <label>{{t "checkout.userName"}} <span class="required">*</span></label>
-                            <input type="text" placeholder="">
+                            {{input
+                                type="text"
+                                placeholder=""
+                                name="customerName"
+                                value=order.customerName
+                            }}
+                            {{#each order.errors.customerName as |error|}}
+                                {{error.message}}
+                            {{/each}}
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="checkout-form-list">
                             <label>{{t "checkout.userSurname"}} <span class="required">*</span></label>
-                            <input type="text" placeholder="">
+                            {{input
+                                    type="text"
+                                    placeholder=""
+                                    name="customerSurname"
+                                    value=order.customerSurname
+                            }}
+                            {{#each order.errors.customerSurname as |error|}}
+                                {{error.message}}
+                            {{/each}}
                         </div>
                     </div>
                     <div class="col-md-12">
                         <div class="checkout-form-list">
                             <label>{{t "checkout.userAddress"}} <span class="required">*</span></label>
-                            <input type="text" placeholder="">
+                            {{input
+                                    type="text"
+                                    placeholder=""
+                                    name="customerAddress"
+                                    value=order.customerAddress
+                            }}
+                            {{#each order.errors.customerAddress as |error|}}
+                                {{error.message}}
+                            {{/each}}
                         </div>
                     </div>
                     <div class="col-md-12">
                         <div class="checkout-form-list">
                             <label>{{t "checkout.userNP"}} <span class="required">*</span></label>
-                            <input type="text" placeholder="">
+                            {{input
+                                    type="text"
+                                    placeholder=""
+                                    name="customerNPDepartment"
+                                    value=order.customerNPDepartment
+                            }}
+                            {{#each order.errors.customerNPDepartment as |error|}}
+                                {{error.message}}
+                            {{/each}}
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="checkout-form-list">
                             <label>{{t "checkout.userEmail"}} <span class="required">*</span></label>
-                            <input type="email" placeholder="">
+                            {{input
+                                    type="text"
+                                    placeholder=""
+                                    name="customerEmail"
+                                    value=order.customerEmail
+                            }}
+                            {{#each order.errors.customerEmail as |error|}}
+                                {{error.message}}
+                            {{/each}}
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="checkout-form-list">
                             <label>{{t "checkout.userPhone"}} <span class="required">*</span></label>
-                            <input type="text" placeholder="">
+                            {{input
+                                    type="text"
+                                    placeholder=""
+                                    name="customerPhone"
+                                    value=order.customerPhone
+                            }}
+                            {{#each order.errors.customerPhone as |error|}}
+                                {{error.message}}
+                            {{/each}}
                         </div>
                     </div>
                 </div>
@@ -69,7 +117,7 @@
                         <tfoot>
                             <tr class="order-total">
                                 <th>{{t "checkout.orderTotal"}}</th>
-                                <td><strong><span class="amount">{{hryvna-price this.order.totalSum}}</span></strong>
+                                <td><strong><span class="amount">{{hryvna-price this.order.price}}</span></strong>
                                 </td>
                             </tr>
                         </tfoot>
@@ -82,15 +130,15 @@
                                 <div class="panel-heading" role="tab">
                                     <h4 class="panel-title">
                                         {{#radio-button
-                                                value="1"
-                                                groupValue=order.payment_method
-                                                name="payment_method"
+                                                value="E"
+                                                groupValue=order.paymentMethod
+                                                name="paymentMethod"
                                         }}
                                             {{t "checkout.payByCard"}}
                                         {{/radio-button}}
                                     </h4>
                                 </div>
-                                {{#if (eq order.payment_method "1")}}
+                                {{#if (eq order.payment_method "E")}}
                                     <div class="panel-collapse" role="tabpanel">
                                         <div class="panel-body">
                                         </div>
@@ -101,9 +149,9 @@
                                 <div class="panel-heading" role="tab" id="headingTwo">
                                     <h4 class="panel-title">
                                         {{#radio-button
-                                                value="2"
-                                                groupValue=order.payment_method
-                                                name="payment_method"
+                                                value="C"
+                                                groupValue=order.paymentMethod
+                                                name="paymentMethod"
                                         }}
                                             {{t "checkout.payByCash"}}
                                         {{/radio-button}}
@@ -111,6 +159,9 @@
                                 </div>
                             </div>
                         </div>
+                        {{#each order.errors.paymentMethod as |error|}}
+                            {{error.message}}
+                        {{/each}}
                         <div class="order-button-payment">
                             <input type="submit" value={{t "checkout.submit"}} {{action "saveOrder" on="click"}}>
                         </div>

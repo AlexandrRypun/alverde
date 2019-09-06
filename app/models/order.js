@@ -2,16 +2,16 @@ import DS from 'ember-data';
 import AppModel from './application';
 
 export default AppModel.extend({
-    status: DS.attr('number'),
-    payment_method: DS.attr('number'),
-    user_name: DS.attr('string'),
-    user_surname: DS.attr('string'),
-    user_email: DS.attr('string'),
-    user_phone: DS.attr('string'),
-    user_address_1: DS.attr('string'),
-    user_address_2: DS.attr('string'),
-    products: DS.hasMany('order-product'),
+    validatePath: '/orders/validate',
 
-    // Additional properties
-    totalSum: DS.attr('number')
+    status: DS.attr('string'),
+    paymentMethod: DS.attr('string'),
+    customerName: DS.attr('string'),
+    customerSurname: DS.attr('string'),
+    customerEmail: DS.attr('string'),
+    customerPhone: DS.attr('string'),
+    customerAddress: DS.attr('string'),
+    customerNPDepartment: DS.attr('string'),
+    products: DS.hasMany('order-product'),
+    price: DS.attr('number')
 });
