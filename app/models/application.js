@@ -5,12 +5,20 @@ const {Model} = DS;
 export default Model.reopen({
     ajax: service(),
     validatePath: 'validate',
-    async validate() {
+    async validate(attributes = []) {
         try {
+            const data = this.serialize();
+            if (attributes.length > 0) {
+                Object.keys(data.data.attributes).forEach(attribute => {
+                    if (!attributes.includes(attribute)) {
+                        delete data.data.attributes[attribute];
+                    }
+                })
+            }
             await this.ajax.request(this.validatePath, {
                 method: 'POST',
                 contentType: 'application/vnd.api+json',
-                data: this.serialize()
+                data
             });
         } catch (e) {
             if (e.status === 422 && Array.isArray(e.payload.errors)) {

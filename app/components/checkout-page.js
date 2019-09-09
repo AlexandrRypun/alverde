@@ -29,6 +29,9 @@ export default Component.extend({
     },
 
     actions: {
+        onAttrChanged(attrName) {
+            this.order.validate([attrName]);
+        },
         saveOrder() {
             this.order.save();
         }

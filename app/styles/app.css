@@ -14,3 +14,20 @@ input[type=radio] {
     height: 40px;
     padding-top: 10px;
 }
+.validation-field {
+    position: relative;
+}
+.validation-field .validation-error {
+    border: 2px solid red;
+}
+.validation-field .error-message {
+    background-color: red;
+    color: #ffffff;
+    display: inline-block;
+    margin-bottom: 5px;
+    padding: 2px 5px;
+    border-radius: 5px;
+    position: absolute;
+    top: -30px;
+    right: 0;
+}

@@ -1,0 +1,12 @@
+{{#if error}}
+    <div class="error-message">{{error}}</div>
+{{/if}}
+{{input
+        type="text"
+        placeholder=""
+        name="customerName"
+        value=value
+        class=inputClasses
+        focus-out=(action 'onChange')
+}}
+

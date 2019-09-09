@@ -64,5 +64,40 @@
     "inCart": "already in the cart",
     "share": "share",
     "moreInfo": "More info"
+  },
+  "errors": {
+    "validation": {
+      "Order": {
+        "customerName": {
+          "is_null": "Enter your name",
+          "notEmpty": "Enter your name"
+        },
+        "customerSurname": {
+          "is_null": "Enter your surname",
+          "notEmpty": "Enter your surname"
+        },
+        "customerAddress": {
+          "is_null": "Enter your address",
+          "notEmpty": "Enter your address"
+        },
+        "customerNPDepartment": {
+          "is_null": "Enter Nova Poshta department",
+          "notEmpty": "Enter Nova Poshta department"
+        },
+        "customerEmail": {
+          "is_null": "Enter your email",
+          "notEmpty": "Enter your email",
+          "isEmail": "Enter correct email"
+        },
+        "customerPhone": {
+          "is_null": "Enter your phone",
+          "notEmpty": "Enter your phone"
+        },
+        "paymentMethod": {
+          "is_null": "Choose payment method",
+          "notEmpty": "Choose payment method"
+        }
+      }
+    }
   }
 }

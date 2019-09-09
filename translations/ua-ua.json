@@ -64,5 +64,40 @@
     "inCart": "вже в кошику",
     "share": "поділитися",
     "moreInfo": "Детальніше"
+  },
+  "errors": {
+    "validation": {
+      "Order": {
+        "customerName": {
+          "is_null": "Вкажіть ім'я",
+          "notEmpty": "Вкажіть ім'я"
+        },
+        "customerSurname": {
+          "is_null": "Вкажіть прізвище",
+          "notEmpty": "Вкажіть прізвище"
+        },
+        "customerAddress": {
+          "is_null": "Вкажіть адресу",
+          "notEmpty": "Вкажіть адресу"
+        },
+        "customerNPDepartment": {
+          "is_null": "Вкажіть номер відділення Нової Пошти",
+          "notEmpty": "Вкажіть номер відділення Нової Пошти"
+        },
+        "customerEmail": {
+          "is_null": "Вкажіть email",
+          "notEmpty": "Вкажіть email",
+          "isEmail": "Вкажіть коректний email"
+        },
+        "customerPhone": {
+          "is_null": "Вкажіть телефон",
+          "notEmpty": "Вкажіть телефон"
+        },
+        "paymentMethod": {
+          "is_null": "Вкажіть спосіб оплати",
+          "notEmpty": "Вкажіть спосіб оплати"
+        }
+      }
+    }
   }
 }

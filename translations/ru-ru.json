@@ -64,5 +64,40 @@
     "inCart": "уже в корзине",
     "share": "поделиться",
     "moreInfo": "Подробнее"
+  },
+  "errors": {
+    "validation": {
+      "Order": {
+        "customerName": {
+          "is_null": "Укажите имя",
+          "notEmpty": "Укажите имя"
+        },
+        "customerSurname": {
+          "is_null": "Укажите фамилию",
+          "notEmpty": "Укажите фамилию"
+        },
+        "customerAddress": {
+          "is_null": "Укажите адресс",
+          "notEmpty": "Укажите адресс"
+        },
+        "customerNPDepartment": {
+          "is_null": "Укажите номер отделения Новой Почты",
+          "notEmpty": "Укажите номер отделения Новой Почты"
+        },
+        "customerEmail": {
+          "is_null": "Укажите email",
+          "notEmpty": "Укажите email",
+          "isEmail": "Укажите корректный email"
+        },
+        "customerPhone": {
+          "is_null": "Укажите телефон",
+          "notEmpty": "Укажите телефон"
+        },
+        "paymentMethod": {
+          "is_null": "Выберите способ оплаты",
+          "notEmpty": "Выберите способ оплаты"
+        }
+      }
+    }
   }
 }
