@@ -53,7 +53,8 @@
     "colName": {
       "prodName": "Product",
       "prodTotal": "Total"
-    }
+    },
+    "orderSaved": "Your order was successfully saved!"
   },
   "products": {
     "addToCart": "Add to Cart",

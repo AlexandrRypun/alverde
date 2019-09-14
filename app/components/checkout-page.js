@@ -6,6 +6,9 @@ export default Component.extend({
     classNames: ['checkout-area', 'ptb-100'],
     store: service(),
     cart: service(),
+    router: service(),
+    notifications: service(),
+    intl: service(),
 
     init(...args) {
         this._super(args);
@@ -33,7 +36,20 @@ export default Component.extend({
             this.order.validate([attrName]);
         },
         saveOrder() {
-            this.order.save();
+            if (this.order.errors.length > 0) {
+                return;
+            }
+            this.order.save()
+                .then(() => {
+                    this.cart.empty();
+                    this.notifications.success(this.intl.t('checkout.orderSaved'));
+                    this.router.transitionTo('index');
+                })
+                .catch(err => {
+                    if (err.code !== 422) {
+                        this.notifications.error(this.intl.t('errors.general'));
+                    }
+                });
         }
     }
 });

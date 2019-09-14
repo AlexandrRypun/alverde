@@ -53,7 +53,8 @@
     "colName": {
       "prodName": "Продукт",
       "prodTotal": "Сумма"
-    }
+    },
+    "orderSaved": "Ваш заказ успешно сохранен!"
   },
   "products": {
     "addToCart": "Добавить в корзину",

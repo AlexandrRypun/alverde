@@ -154,7 +154,7 @@
                             {{error.message}}
                         {{/each}}
                         <div class="order-button-payment">
-                            <input type="submit" value={{t "checkout.submit"}} {{action "saveOrder" on="click"}}>
+                            <input type="submit" value={{t "checkout.submit"}} {{action "saveOrder" on="click"}} class="{{if order.errors 'disabled'}}">
                         </div>
                     </div>
                 </div>

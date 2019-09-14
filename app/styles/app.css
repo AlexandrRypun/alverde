@@ -18,7 +18,7 @@ input[type=radio] {
     position: relative;
 }
 .validation-field .validation-error {
-    border: 2px solid red;
+    border: 2px solid red !important;
 }
 .validation-field .error-message {
     background-color: red;
@@ -30,4 +30,24 @@ input[type=radio] {
     position: absolute;
     top: -30px;
     right: 0;
+}
+input.disabled, input.disabled:hover,
+a.disabled, a.disabled:hover {
+    color: #d7d8d9;
+    background-color: #979999;
+    cursor: default;
+}
+div.notification-container>div {
+    max-width: 700px;
+}
+.notification-message {
+    font-size: 16px;
+}
+.notification-message div:first-child i {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+}
+.notification-message div:nth-child(2) {
+    margin: 5px 5px 5px 0;
 }

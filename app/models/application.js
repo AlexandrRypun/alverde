@@ -36,9 +36,10 @@ export default Model.reopen({
         try {
             await this._super(args);
         } catch (e) {
-            if (!(e instanceof DS.InvalidError)) {
-                this.handleErrors(e);
+            if (e instanceof DS.InvalidError) {
+                e.code = 422;
             }
+            throw e;
         }
     },
 

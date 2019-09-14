@@ -53,7 +53,8 @@
     "colName": {
       "prodName": "Продукт",
       "prodTotal": "Сума"
-    }
+    },
+    "orderSaved": "Ваше замовлення успішно збережене!"
   },
   "products": {
     "addToCart": "Додати до кошика",
@@ -66,6 +67,7 @@
     "moreInfo": "Детальніше"
   },
   "errors": {
+    "general": " Упс, щось пішло не так :(",
     "validation": {
       "Order": {
         "customerName": {

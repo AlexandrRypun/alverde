@@ -14,4 +14,5 @@ export default {
         10: [3, 6],
         11: [3, 4, 8]
     }),
+    notificationDuration: 400000
 }

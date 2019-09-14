@@ -31,7 +31,7 @@
                             <ul>
                                 <li>{{t "cart.cartTotal"}}<span>{{hryvna-price totalSum}}</span></li>
                             </ul>
-                            <LinkTo @route="checkout">{{t "cart.submit"}}</LinkTo>
+                            <LinkTo @disabled={{not cart.products}} @route="checkout">{{t "cart.submit"}}</LinkTo>
                         </div>
                     </div>
                 </div>
