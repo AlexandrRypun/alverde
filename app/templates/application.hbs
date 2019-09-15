@@ -3,29 +3,35 @@
         <div class="header-area">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-md-3 col-lg-3  col-sm-4 col-xs-4">
+                    <div class="col-md-2 col-lg-2 col-sm-4 col-xs-3">
                         <div class="logo">
                             <LinkTo @route="index"><img src="/assets/img/logo/logo.png" alt=""></LinkTo>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-6 col-sm-2 col-xs-2 text-center">
-                        <MainMenu @categories={{this.model.categories}}/>
+                    <div class="col-md-8 col-lg-8 col-sm-2 col-xs-1 text-center">
+                        {{#let (component "main-menu/desktop") as |MainMenu|}}
+                            <MainMenu @categories={{this.model.categories}}/>
+                        {{/let}}
                     </div>
-                    <div class="col-md-3 col-lg-3 col-xs-6 col-sm-6 text-right text-sm text-res">
+                    <div class="col-md-2 col-lg-2 col-sm-6 col-xs-7 text-right text-sm text-res">
                         <div class="cart-user-language">
-                            <div class="shopping-cart ml-30">
+                            <div class="shopping-cart ml-20">
                                 <LinkTo @route="cart" class="top-cart">{{this.cartProductsQty}}<i class="pe-7s-cart"></i></LinkTo>
                             </div>
                             <div class="user">
                                 <a href="#" data-toggle="modal" data-target="#loginModal"><i class="pe-7s-add-user"></i></a>
                             </div>
-                            <div class="language-menu none">
+                            <div class="language-menu">
                                 <LanguageToggle />
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="mobile-menu"></div>
+                <div class="mobile-menu mean-container">
+                    {{#let (component "main-menu/mobile") as |MainMenu|}}
+                        <MainMenu @categories={{this.model.categories}}/>
+                    {{/let}}
+                </div>
             </div>
         </div>
     </header>

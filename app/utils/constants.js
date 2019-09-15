@@ -2,9 +2,18 @@ import EmberObject from '@ember/object';
 
 export default {
     languages: EmberObject.create({
-        'ua-ua': 'Українська',
-        'ru-ru': 'Русский',
-        'en-us': 'English'
+        'ua-ua': {
+            fullName: 'Українська',
+            shortName: 'Укр'
+        },
+        'ru-ru': {
+            fullName: 'Русский',
+            shortName: 'Рус'
+        },
+        'en-us': {
+            fullName: 'English',
+            shortName: 'Eng'
+        }
     }),
     productsScheme: EmberObject.create({
         5: [3],
@@ -14,5 +23,6 @@ export default {
         10: [3, 6],
         11: [3, 4, 8]
     }),
-    notificationDuration: 400000
+    notificationDuration: 4000,
+    mobileMenuWidth: 991
 }

@@ -1,0 +1,19 @@
+{{#if showMenu}}
+    <nav>
+        <ul class="menu">
+            <li><LinkTo @route="index">{{t "mainMenu.home"}}</LinkTo></li>
+            <li><a href="#">{{t "mainMenu.categories"}} <i class="pe-7s-angle-down"></i></a>
+                <ul>
+                    <li><LinkTo @route="products.index" @query={{hash category=null}}>{{t "mainMenu.allCategories"}}</LinkTo></li>
+                    {{#each this.categories as |category|}}
+                        <li><LinkTo @route="products.index" @query={{hash category=category.id}}>{{category.name}}</LinkTo></li>
+                    {{/each}}
+                </ul>
+            </li>
+            <li><LinkTo @route="about-us">{{t "mainMenu.aboutUs"}}</LinkTo></li>
+            <li><LinkTo @route="delivery">{{t "mainMenu.delivery"}}</LinkTo></li>
+            <li><LinkTo @route="contacts">{{t "mainMenu.contacts"}}</LinkTo></li>
+        </ul>
+    </nav>
+{{/if}}
+

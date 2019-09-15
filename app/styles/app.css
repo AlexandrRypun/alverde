@@ -51,3 +51,29 @@ div.notification-container>div {
 .notification-message div:nth-child(2) {
     margin: 5px 5px 5px 0;
 }
+.hidden {
+    display: none!important;
+}
+.main-menu {
+    margin-top: 35px;
+}
+.main-menu ul li {
+    padding: 0;
+}
+.mobile-menu .meanmenu-reveal,
+.mobile-menu .mean-expand {
+    text-align: center;
+    font-size: 18px;
+}
+.mobile-menu ul {
+    display: none;
+}
+.user > a {
+    padding-left: 20px;
+}
+
+@media (max-width: 1050px) {
+    .shopping-cart.ml-20 {
+        margin-left: 10px;
+    }
+}

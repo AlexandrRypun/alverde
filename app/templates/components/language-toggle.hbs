@@ -1,7 +1,7 @@
 <li><a href="#">{{selected}} <i class="pe-7s-angle-down"></i></a>
     <ul>
-        {{#each-in languages as |langKey langName|}}
-            <li><a href="#" {{action "setSelection" langKey on="click"}}>{{langName}}</a></li>
+        {{#each-in languages as |langKey langNames|}}
+            <li><a href="#" {{action "setSelection" langKey on="click"}}>{{get langNames "fullName"}}</a></li>
         {{/each-in}}
     </ul>
 </li>

@@ -112,7 +112,7 @@
                         {{#if order.errors.paymentMethod}}
                             <div class="error-message">
                                 {{#each order.errors.paymentMethod as |error|}}
-                                    {{t (concat 'errors.validation.' error.message)}}
+                                    {{t (concat "errors.validation." error.message)}}
                                 {{/each}}
                             </div>
                         {{/if}}
@@ -154,7 +154,7 @@
                             {{error.message}}
                         {{/each}}
                         <div class="order-button-payment">
-                            <input type="submit" value={{t "checkout.submit"}} {{action "saveOrder" on="click"}} class="{{if order.errors 'disabled'}}">
+                            <input type="submit" value={{t "checkout.submit"}} {{action "saveOrder" on="click"}} class={{if order.errors "disabled"}}>
                         </div>
                     </div>
                 </div>
