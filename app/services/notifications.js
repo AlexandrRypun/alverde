@@ -1,5 +1,5 @@
 import NotificationsService from 'ember-cli-notifications/services/notification-messages-service';
-import constants from 'alverde/utils/constants';
+import constants from 'bemiracle/utils/constants';
 
 export default NotificationsService.extend({
     init(...args) {

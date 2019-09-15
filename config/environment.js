@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   let ENV = {
-    modulePrefix: 'alverde',
+    modulePrefix: 'bemiracle',
     environment,
     rootURL: '/',
     locationType: 'auto',
@@ -25,7 +25,7 @@ module.exports = function(environment) {
   };
 
   if (environment === 'development') {
-      ENV.APP.api.host = 'http://api.alverde.hz';
+      ENV.APP.api.host = 'http://api.bemiracle.hz';
   }
 
   if (environment === 'test') {

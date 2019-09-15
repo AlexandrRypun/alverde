@@ -1,6 +1,6 @@
 import Component from '@ember/component';
 import jq from 'jquery';
-import constants from 'alverde/utils/constants';
+import constants from 'bemiracle/utils/constants';
 
 export default Component.extend({
     classNames: ['main-menu', 'display-inline'],

@@ -1,6 +1,6 @@
 import Component from '@ember/component';
 import { computed } from '@ember/object';
-import constants from 'alverde/utils/constants';
+import constants from 'bemiracle/utils/constants';
 
 export default Component.extend({
     classNames: ['grid-item', 'col-sm-6', 'col-xs-12'],

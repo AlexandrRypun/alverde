@@ -1,4 +1,4 @@
-import constants from 'alverde/utils/constants';
+import constants from 'bemiracle/utils/constants';
 import { module, test } from 'qunit';
 
 module('Unit | Utility | constants', function() {

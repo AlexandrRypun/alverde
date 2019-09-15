@@ -1,5 +1,5 @@
 import EmberObject from '@ember/object';
-import SaveRelationshipsMixinMixin from 'alverde/mixins/save-relationships-mixin';
+import SaveRelationshipsMixinMixin from 'bemiracle/mixins/save-relationships-mixin';
 import { module, test } from 'qunit';
 
 module('Unit | Mixin | SaveRelationshipsMixin', function() {
