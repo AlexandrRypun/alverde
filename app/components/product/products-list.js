@@ -4,8 +4,10 @@ import jq from 'jquery';
 
 export default Component.extend({
     classNames: ['shop-style-all', 'mt-50'],
+    reCalculatePagination: true,
     prodsObs: observer('products.[]', function prodsObs() {
         this.replaceProducts();
+        this.toggleProperty('reCalculatePagination');
     }),
     didInsertElement() {
         this.replaceProducts();

@@ -24,5 +24,6 @@ export default {
         11: [3, 4, 8]
     }),
     notificationDuration: 4000,
-    mobileMenuWidth: 991
+    mobileMenuWidth: 991,
+    paginationPageButtons: 5
 }

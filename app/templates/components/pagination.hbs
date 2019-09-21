@@ -1,0 +1,5 @@
+{{#if (not (eq buttons.length 1))}}
+    {{#each buttons as |button|}}
+        <span class="page-button {{if (eq button.page page) 'active'}}" {{action 'goToPage' button.page}}>{{button.name}}</span>
+    {{/each}}
+{{/if}}

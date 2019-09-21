@@ -71,6 +71,24 @@ div.notification-container>div {
 .user > a {
     padding-left: 20px;
 }
+.pagination-block{
+    text-align: center;
+}
+.pagination-block .page-button {
+    display: inline-block;
+    width: 30px;
+    line-height: 30px;
+    margin: 1px;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align: center;
+}
+.pagination-block .page-button:not(.active) {
+    cursor: pointer;
+}
+.pagination-block .page-button.active {
+    background-color: #8080805e;
+}
 
 @media (max-width: 1050px) {
     .shopping-cart.ml-20 {
