@@ -19,7 +19,7 @@
                                 <LinkTo @route="cart" class="top-cart">{{this.cartProductsQty}}<i class="pe-7s-cart"></i></LinkTo>
                             </div>
                             <div class="user">
-                                <a href="#" data-toggle="modal" data-target="#loginModal"><i class="pe-7s-add-user"></i></a>
+                                <LoginForm />
                             </div>
                             <div class="language-menu">
                                 <LanguageToggle />
@@ -64,39 +64,6 @@
             </div>
         </div>
     </footer>
-    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label={{t "login.close"}}><span aria-hidden="true">{{t "closeSign"}}</span></button>
-                </div>
-                <div class="modal-body">
-                    <div class="login">
-                        <div class="login-form-container">
-                            <div class="login-text">
-                                <h2>{{t "login.header"}}</h2>
-                                <span>{{t "login.loginDesc"}}</span>
-                            </div>
-                            <div class="login-form">
-                                <form action="#" method="post">
-                                    <input type="text" name="user-name" placeholder={{t "login.placeholder.username"}}>
-                                    <input type="password" name="user-password" placeholder={{t "login.placeholder.password"}}>
-                                    <div class="button-box">
-                                        <div class="login-toggle-btn">
-                                            <input type="checkbox" id="remember">
-                                            <label for="remember">{{t "login.rememberMe"}}</label>
-                                            <a href="#">{{t "login.forgotPassword"}}</a>
-                                        </div>
-                                        <button type="submit" class="default-btn floatright">{{t "login.submit"}}</button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 </div>
 <div class="notification-container">
     {{notification-container position="top"}}

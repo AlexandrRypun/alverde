@@ -3,6 +3,9 @@
   "footerSignature": "Since 2019",
   "closeSign": "×",
   "x": "×",
+  "modal": {
+    "close": "Close"
+  },
   "mainMenu": {
     "home": "Home",
     "categories": "Categories",
@@ -14,14 +17,31 @@
   "login": {
     "header": "Login",
     "loginDesc": "Please login using account detail bellow.",
-    "close": "Close",
     "rememberMe": "Remember me",
     "forgotPassword": "Forgot Password?",
     "submit": "Login",
+    "toSignUp": "Sign Up",
     "placeholder": {
-      "username": "Username",
+      "email": "Email",
       "password": "Password"
-    }
+    },
+    "successfulLogin": "Hi, {firstName}!",
+    "profile": "{firstName} profile",
+    "logout": "Logout"
+  },
+  "registration": {
+    "header": "Registration",
+    "forgotPassword": "Forgot Password?",
+    "submit": "Sign Up",
+    "toLogin": "Back to login",
+    "placeholder": {
+      "firstName": "Name",
+      "lastName": "Surname",
+      "email": "Email",
+      "password": "Password",
+      "repeatPassword": "Repeat password"
+    },
+    "userRegistered": "You were successfully registered!"
   },
   "cart": {
     "title": "Shopping Cart",
@@ -67,6 +87,9 @@
     "moreInfo": "More info"
   },
   "errors": {
+    "general": "Oops, something went wrong",
+    "forbidden": "Access denied",
+    "unsuccessfulLogin": "There is no user with such credentials",
     "validation": {
       "Order": {
         "customerName": {
@@ -97,6 +120,25 @@
         "paymentMethod": {
           "is_null": "Choose payment method",
           "notEmpty": "Choose payment method"
+        }
+      },
+      "User": {
+        "firstName": {
+          "is_null": "Enter your name",
+          "notEmpty": "Enter your name"
+        },
+        "lastName": {
+          "is_null": "Enter your surname",
+          "notEmpty": "Enter your surname"
+        },
+        "email": {
+          "is_null": "Enter your email",
+          "notEmpty": "Enter your email",
+          "isEmail": "Enter correct email"
+        },
+        "password": {
+          "is_null": "Enter your password",
+          "len": "Too short password"
         }
       }
     }

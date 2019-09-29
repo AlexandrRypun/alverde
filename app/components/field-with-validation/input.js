@@ -5,6 +5,7 @@ import { inject as service } from '@ember/service';
 export default Component.extend({
     classNames: ['validation-field'],
     intl: service(),
+    type: "text",
     inputClasses: computed('class', 'error', function() {
         const inputClasses = this.class ? [this.class] : [];
         if (this.error) {
@@ -23,7 +24,9 @@ export default Component.extend({
 
     actions: {
         onChange() {
-            this.onChange(this.name);
+            if (this.onChange !== undefined) {
+                this.onChange(this.name);
+            }
         }
     }
 });

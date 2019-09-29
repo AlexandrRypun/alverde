@@ -1,7 +1,8 @@
 import DS from 'ember-data';
 import config from 'bemiracle/config/environment';
+import TokenAuthorizerMixin from 'ember-simple-auth-token/mixins/token-authorizer';
 
-export default DS.JSONAPIAdapter.extend({
+export default DS.JSONAPIAdapter.extend(TokenAuthorizerMixin, {
     host: config.APP.api.host,
 
     createRecord(store, type, snapshot) {

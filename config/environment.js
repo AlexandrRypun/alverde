@@ -21,6 +21,14 @@ module.exports = function(environment) {
       api: {
         host: ''
       }
+    },
+    'ember-simple-auth-token': {
+      serverTokenEndpoint: 'http://api.bemiracle.hz/login',
+      refreshAccessTokens: false,
+      tokenPropertyName: 'token', // Key in server response that contains the access token
+      headers: {
+        'Content-Type': 'application/vnd.api+json'
+      }
     }
   };
 

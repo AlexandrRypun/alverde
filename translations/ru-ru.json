@@ -3,6 +3,9 @@
   "footerSignature": "С 2019",
   "closeSign": "×",
   "x": "×",
+  "modal": {
+    "close": "Закрыть"
+  },
   "mainMenu": {
     "home": "Главная",
     "categories": "Категории",
@@ -14,14 +17,31 @@
   "login": {
     "header": "Логин",
     "loginDesc": "Пожалуйста, введите следующие поля, чтобы войти в систему.",
-    "close": "Закрыть",
     "rememberMe": "Запомнить меня",
     "forgotPassword": "Забыли пароль?",
     "submit": "Ввойти",
+    "toSignUp": "Регистрация",
     "placeholder": {
-      "username": "Никнейм",
+      "email": "Email",
       "password": "Пароль"
-    }
+    },
+    "successfulLogin": "Привет, {firstName}!",
+    "profile": "Профиль {firstName}",
+    "logout": "Выйти"
+  },
+  "registration": {
+    "header": "Регистрация",
+    "forgotPassword": "Забыли пароль?",
+    "submit": "Зарегистрироваться",
+    "toLogin": "На логин",
+    "placeholder": {
+      "firstName": "Имя",
+      "lastName": "Фамилия",
+      "email": "Email",
+      "password": "Пароль",
+      "repeatPassword": "Повторить пароль"
+    },
+    "userRegistered": "Вы успешно зарегистрировались!"
   },
   "cart": {
     "title": "Корзина",
@@ -67,36 +87,58 @@
     "moreInfo": "Подробнее"
   },
   "errors": {
+    "general": " Упс, что-то пошло не так :(",
+    "forbidden": "Доступ запрещен",
+    "unsuccessfulLogin": "Юзера з такими данными несуществует",
     "validation": {
       "Order": {
         "customerName": {
-          "is_null": "Укажите имя",
-          "notEmpty": "Укажите имя"
+          "is_null": "Введите имя",
+          "notEmpty": "Введите имя"
         },
         "customerSurname": {
-          "is_null": "Укажите фамилию",
-          "notEmpty": "Укажите фамилию"
+          "is_null": "Введите фамилию",
+          "notEmpty": "Введите фамилию"
         },
         "customerAddress": {
-          "is_null": "Укажите адресс",
-          "notEmpty": "Укажите адресс"
+          "is_null": "Введите адресс",
+          "notEmpty": "Введите адресс"
         },
         "customerNPDepartment": {
-          "is_null": "Укажите номер отделения Новой Почты",
-          "notEmpty": "Укажите номер отделения Новой Почты"
+          "is_null": "Введите номер отделения Новой Почты",
+          "notEmpty": "Введите номер отделения Новой Почты"
         },
         "customerEmail": {
-          "is_null": "Укажите email",
-          "notEmpty": "Укажите email",
-          "isEmail": "Укажите корректный email"
+          "is_null": "Введите email",
+          "notEmpty": "Введите email",
+          "isEmail": "Введите корректный email"
         },
         "customerPhone": {
-          "is_null": "Укажите телефон",
-          "notEmpty": "Укажите телефон"
+          "is_null": "Введите телефон",
+          "notEmpty": "Введите телефон"
         },
         "paymentMethod": {
           "is_null": "Выберите способ оплаты",
           "notEmpty": "Выберите способ оплаты"
+        }
+      },
+      "User": {
+        "firstName": {
+          "is_null": "Введите имя",
+          "notEmpty": "Введите имя"
+        },
+        "lastName": {
+          "is_null": "Введите фамилию",
+          "notEmpty": "Введите фамилию"
+        },
+        "email": {
+          "is_null": "Введите email",
+          "notEmpty": "Введите email",
+          "isEmail": "Введите корректный email"
+        },
+        "password": {
+          "is_null": "Введите пароль",
+          "len": "Короткий пароль"
         }
       }
     }

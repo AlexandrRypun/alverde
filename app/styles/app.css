@@ -79,18 +79,110 @@ div.notification-container>div {
     width: 30px;
     line-height: 30px;
     margin: 1px;
-    border: 1px solid black;
-    border-radius: 5px;
+    /*border: 1px solid black;*/
+    border-radius: 15px;
     text-align: center;
 }
 .pagination-block .page-button:not(.active) {
     cursor: pointer;
+    /*text-decoration: underline;*/
+    /*color: blue;*/
 }
 .pagination-block .page-button.active {
     background-color: #8080805e;
+    /*text-decoration: underline;*/
+}
+#loginModal .button-link {
+    display: inline-block;
+    float: right;
+    margin-top: 18px;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+#loginModal input::placeholder {
+    color: #CECECE;
+}
+#loginModal input:focus::placeholder{
+    color:transparent;
+}
+.modal {
+    z-index: 1050;
+}
+.language-menu ul li,
+.user ul li {
+    display: inline-block;
+    margin-left: 30px;
+    padding: 35px 0;
+    position: relative;
+}
+.language-menu ul li ul,
+.user ul li ul {
+    background: #333 none repeat scroll 0 0;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.176);
+    right: 0;
+    opacity: 0;
+    padding: 5px 0;
+    position: absolute;
+    text-align: left;
+    top: 70%;
+    transition: all 0.3s ease 0s;
+    visibility: hidden;
+    width: 100px;
+    z-index: 999;
+}
+.user ul li ul {
+    top: 100%;
+}
+.language-menu ul li:hover > ul,
+.user ul li:hover > ul {
+    opacity: 1;
+    visibility: visible;
+}
+.language-menu ul li a,
+.user ul li a {
+    color: #303030;
+    font-family: "Karla", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    position: relative;
+    text-transform: uppercase;
+}
+.language-menu ul li ul li:first-child,
+.user ul li ul li:first-child {
+    border-top: medium none;
+}
+.language-menu ul li ul li,
+.user ul li ul li {
+    background: #333 none repeat scroll 0 0;
+    border-top: 1px solid #444;
+    display: block;
+    margin: 0;
+    padding: 0 2px;
+    transition: all 0.3s ease 0s;
+    text-align: center;
+}
+.language-menu ul li ul li a,
+.user ul li ul li a {
+    color: #fff;
+    display: block;
+    padding: 7px 0;
+    text-transform: capitalize;
+}
+.user ul#user-menu a > i {
+    font-size: 25px;
+    padding: 0;
+}
+.user ul#user-menu > li {
+    padding-bottom: 0;
+}
+
+.mean-container .mean-bar {
+    z-index: 1000;
 }
 
 @media (max-width: 1050px) {
+    #user-menu > li,
     .shopping-cart.ml-20 {
         margin-left: 10px;
     }

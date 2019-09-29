@@ -3,6 +3,9 @@
   "footerSignature": "З 2019",
   "closeSign": "×",
   "x": "×",
+  "modal": {
+    "close": "Закрити"
+  },
   "mainMenu": {
     "home": "Головна",
     "categories": "Категорії",
@@ -14,14 +17,31 @@
   "login": {
     "header": "Логін",
     "loginDesc": "Будь ласка, увійдіть в систему заповнивши наступні поля.",
-    "close": "Закрити",
     "rememberMe": "Запам'ятати мене",
     "forgotPassword": "Забули пароль?",
     "submit": "Увійти",
+    "toSignUp": "Реєстрація",
     "placeholder": {
-      "username": "Нікнейм",
+      "email": "Email",
       "password": "Пароль"
-    }
+    },
+    "successfulLogin": "Привіт, {firstName}!",
+    "profile": "Профіль {firstName}",
+    "logout": "Вийти"
+  },
+  "registration": {
+    "header": "Реєстрація",
+    "forgotPassword": "Забули пароль?",
+    "submit": "Зареєструватися",
+    "toLogin": "До логіну",
+    "placeholder": {
+      "firstName": "Ім'я",
+      "lastName": "Прізвище",
+      "email": "Email",
+      "password": "Пароль",
+      "repeatPassword": "Повторити пароль"
+    },
+    "userRegistered": "Ви успішно зареєструвалися!"
   },
   "cart": {
     "title": "Кошик",
@@ -68,6 +88,8 @@
   },
   "errors": {
     "general": " Упс, щось пішло не так :(",
+    "forbidden": "Доступ заборонений",
+    "unsuccessfulLogin": "Юзера з такими даними неіснує",
     "validation": {
       "Order": {
         "customerName": {
@@ -98,6 +120,25 @@
         "paymentMethod": {
           "is_null": "Вкажіть спосіб оплати",
           "notEmpty": "Вкажіть спосіб оплати"
+        }
+      },
+      "User": {
+        "firstName": {
+          "is_null": "Вкажіть ім'я",
+          "notEmpty": "Вкажіть ім'я"
+        },
+        "lastName": {
+          "is_null": "Вкажіть прізвище",
+          "notEmpty": "Вкажіть прізвище"
+        },
+        "email": {
+          "is_null": "Вкажіть email",
+          "notEmpty": "Вкажіть email",
+          "isEmail": "Вкажіть коректний email"
+        },
+        "password": {
+          "is_null": "Вкажіть пароль",
+          "len": "Закороткий пароль"
         }
       }
     }

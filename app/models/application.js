@@ -44,6 +44,6 @@ export default Model.reopen({
     },
 
     handleErrors(errors) {
-        console.log(errors);
+        console.error(errors);
     }
 });
