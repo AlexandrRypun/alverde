@@ -16,6 +16,24 @@ Router.map(function() {
   });
   this.route('checkout');
   this.route('profile');
+
+  this.route('admin', function() {
+    this.route('products', function() {
+      this.route('product');
+    });
+
+    this.route('orders', function() {
+      this.route('order');
+    });
+
+    this.route('users', function() {
+      this.route('user');
+    });
+
+    this.route('categories', function() {
+      this.route('category');
+    });
+  });
 });
 
 export default Router;
