@@ -187,3 +187,9 @@ div.notification-container>div {
         margin-left: 10px;
     }
 }
+
+#admin-categories-list table {
+    width: 50%;
+    margin: 0 auto;
+    font-size: 18px;
+}

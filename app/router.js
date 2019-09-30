@@ -31,7 +31,7 @@ Router.map(function() {
     });
 
     this.route('categories', function() {
-      this.route('category');
+      this.route('category', { path: '/:cat_id'});
     });
   });
 });

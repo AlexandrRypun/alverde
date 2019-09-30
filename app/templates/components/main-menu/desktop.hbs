@@ -6,7 +6,7 @@
                 <ul>
                     <li><LinkTo @route="products.index" @query={{hash category=null}}>{{t "mainMenu.allCategories"}}</LinkTo></li>
                     {{#each this.categories as |category|}}
-                        <li><LinkTo @route="products.index" @query={{hash category=category.id page=1}}>{{category.name}}</LinkTo></li>
+                        <li><LinkTo @route="products.index" @query={{hash category=category.id page=1}}>{{translate category "name"}}</LinkTo></li>
                     {{/each}}
                 </ul>
             </li>

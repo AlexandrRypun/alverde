@@ -1,1 +1,3 @@
-{{outlet}}
+{{#let (component "admin/categories/category") as |Category|}}
+    <Category @category={{model}}/>
+{{/let}}

@@ -2,13 +2,13 @@ import DS from 'ember-data';
 import {inject as service} from '@ember/service';
 const {Model} = DS;
 
-export default Model.reopen({
+export default Model.extend({
     ajax: service(),
     validatePath: 'validate',
     async validate(attributes = []) {
         try {
             const data = this.serialize();
-            if (attributes.length > 0) {
+            if (attributes.length > 0 && data.data.attributes !== undefined) {
                 Object.keys(data.data.attributes).forEach(attribute => {
                     if (!attributes.includes(attribute)) {
                         delete data.data.attributes[attribute];

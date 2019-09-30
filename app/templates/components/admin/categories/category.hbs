@@ -1,0 +1,17 @@
+<div class="row">
+    {{#let (component "field-with-validation/input") as |InputWithValidation|}}
+        <div class="col-md-6">
+            {{#each category.translations as |translation|}}
+                <div class="checkout-form-list">
+                    <label>{{t "checkout.userName"}} <span class="required">*</span></label>
+                    <InputWithValidation
+                            @model={{translation}}
+                            @name="name"
+                            @value={{translation.name}}
+                            @onChange={{action "onAttrChanged"}}
+                    />
+                </div>
+            {{/each}}
+        </div>
+    {{/let}}
+</div>

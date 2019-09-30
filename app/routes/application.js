@@ -20,7 +20,7 @@ export default Route.extend({
     async model() {
         await this.cart.loadProducts();
         return hash({
-            categories: this.store.findAll('category'),
+            categories: this.store.query('category', {include: ['translations']})
         });
     }
 });
